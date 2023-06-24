@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/openFragment">
+
+    <fragment
+        android:id="@+id/artFragment"
+        android:name="com.soneralci.artbookhilttesting.view.ArtFragment"
+        android:label="ArtFragment" >
+        <action
+            android:id="@+id/action_artFragment_to_artDetailsFragment"
+            app:destination="@id/artDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artDetailsFragment"
+        android:name="com.soneralci.artbookhilttesting.view.ArtDetailsFragment"
+        android:label="ArtDetailsFragment" >
+        <action
+            android:id="@+id/action_artDetailsFragment_to_imageAPIFragment"
+            app:destination="@id/imageAPIFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageAPIFragment"
+        android:name="com.soneralci.artbookhilttesting.view.ImageAPIFragment"
+        android:label="ImageAPIFragment" />
+    <fragment
+        android:id="@+id/openFragment"
+        android:name="com.soneralci.artbookhilttesting.view.OpenFragment"
+        android:label="OpenFragment" >
+        <action
+            android:id="@+id/action_openFragment_to_artFragment"
+            app:destination="@id/artFragment" />
+    </fragment>
+</navigation>
